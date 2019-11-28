@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_testdemo/todoList.dart';
-import 'package:flutter_driver/driver_extension.dart';
 
-void main() {
-  // enableFlutterDriverExtension();
-  runApp(MyApp());
-}
+void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
@@ -102,17 +98,19 @@ class _MyHomePageState extends State<MyHomePage> {
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.display1,
+              key: Key('counter'),
             ),
-            FlatButton(
-              onPressed: () {
-                Navigator.push(context, 
-                MaterialPageRoute(builder:(BuildContext context) {
-                  return TodoList();
-                } ),
-                );
-              },
-              child: Icon(Icons.navigate_next),
-            )
+            // FlatButton(
+            //   onPressed: () {
+            //     Navigator.push(context, 
+            //     MaterialPageRoute(builder:(BuildContext context) {
+            //       return TodoList();
+            //     } ),
+            //     );
+            //   },
+            //   child: Icon(Icons.navigate_next),
+            //   key: Key('increment'),
+            // )
           ],
         ),
       ),
@@ -120,6 +118,7 @@ class _MyHomePageState extends State<MyHomePage> {
         onPressed: _incrementCounter,
         tooltip: 'Increment',
         child: Icon(Icons.add),
+        key: Key('increment')
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }

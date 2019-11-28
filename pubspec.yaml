@@ -30,6 +30,8 @@ dev_dependencies:
     sdk: flutter
   flutter_driver:
     sdk: flutter
+  test: any
+
 
     
 
