@@ -31,6 +31,8 @@ dev_dependencies:
   flutter_driver:
     sdk: flutter
   test: any
+  flutter_bloc: ^2.0.0
+  bloc_test: ^2.0.0
 
 
     

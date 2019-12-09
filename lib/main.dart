@@ -100,17 +100,17 @@ class _MyHomePageState extends State<MyHomePage> {
               style: Theme.of(context).textTheme.display1,
               key: Key('counter'),
             ),
-            // FlatButton(
-            //   onPressed: () {
-            //     Navigator.push(context, 
-            //     MaterialPageRoute(builder:(BuildContext context) {
-            //       return TodoList();
-            //     } ),
-            //     );
-            //   },
-            //   child: Icon(Icons.navigate_next),
-            //   key: Key('increment'),
-            // )
+            FlatButton(
+              onPressed: () {
+                Navigator.push(context, 
+                MaterialPageRoute(builder:(BuildContext context) {
+                  return TodoList();
+                } ),
+                );
+              },
+              child: Icon(Icons.navigate_next),
+              key: Key('increment'),
+            )
           ],
         ),
       ),
@@ -118,7 +118,7 @@ class _MyHomePageState extends State<MyHomePage> {
         onPressed: _incrementCounter,
         tooltip: 'Increment',
         child: Icon(Icons.add),
-        key: Key('increment')
+        // key: Key('increment')
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
